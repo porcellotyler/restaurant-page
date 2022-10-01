@@ -1,10 +1,4 @@
-/* 
-
-Write the tab-switching logic inside of index.js. You should have event listeners for each tab that wipes out the current contents and then runs the correct ‘tab module’ to populate it again
-
-*/
-
-const homepageFunction = () => {
+const contactFunction = () => {
     const contentDiv = document.getElementById('content');
 
     const headerDiv = document.createElement('div');
@@ -34,14 +28,14 @@ const homepageFunction = () => {
         headerDiv.appendChild(contactDiv);
 
     const mainImg = document.createElement("img");
-        mainImg.src = "cafe.svg";
+        mainImg.src = "phone.svg";
         contentDiv.appendChild(mainImg);
         mainImg.classList.add("mainImg");
 
     const copyDiv = document.createElement("div");
-    const copyDivContent = document.createTextNode('"We love GENERIC_CAFE_NAME!" - John & Jane     "My favorite coffee is from GENERIC_CAFE_NAME they always seem to know how to do it just right! - Dana White     "I especially love their baked goods, this place really does have it all! And all for affordable prices, how amazing!" - Anonymous Google Reviewer');
+    const copyDivContent = document.createTextNode('GIVE US A CALL AT 123-456-7890 AND COME VISIT AT 123 MAIN STREET ANYTOWN, USA Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.');
         copyDiv.appendChild(copyDivContent);
         contentDiv.appendChild(copyDiv);
 };
 
-export { homepageFunction };
+export { contactFunction };
