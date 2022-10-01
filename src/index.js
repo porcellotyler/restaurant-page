@@ -4,10 +4,39 @@ import { menuFunction } from './menu';
 
 homepageFunction();
 
-const menuDiv = document.getElementById('menuDiv');
-    menuDiv.addEventListener("click", function() { menuFunction() });
+const contentDiv = document.getElementById('content');
 
-const contactDiv = document.getElementById('contactDiv');
-    contactDiv.addEventListener("click", function() { contactFunction() });
+function renderHome() {
+    contentDiv.innerHTML = '';
+    homepageFunction();
+};
+
+function renderMenu() {
+    contentDiv.innerHTML = '';
+    menuFunction();
+};
+
+function renderContact() {
+    contentDiv.innerHTML = '';
+    contactFunction();
+};
+
+
+document.addEventListener("click", (e) => {
+    const target = e.target.innerText;
+  
+    if (target === "Home") {
+        renderHome();
+    }
+
+    if (target === "Menu") {
+        renderMenu();
+    }
+
+    if (target === "Contact") {
+        renderContact();
+    }
+
+  });
 
 console.log("testing message");

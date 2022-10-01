@@ -6,7 +6,7 @@ Write the tab-switching logic inside of index.js. You should have event listener
 
 const homepageFunction = () => {
     const contentDiv = document.getElementById('content');
-
+        
     const headerDiv = document.createElement('div');
         headerDiv.classList.add("headerContainer");
         contentDiv.appendChild(headerDiv);
