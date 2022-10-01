@@ -39,4 +39,14 @@ document.addEventListener("click", (e) => {
 
   });
 
-console.log("testing message");
+/*
+
+ideas for future use:
+-add footer for all pages
+-add minor animation/effects on mouseover in the header
+-add google maps integration showing location
+-add page for media/press
+-add shopify/online ordering plugin
+-add social media widgets
+
+*/
