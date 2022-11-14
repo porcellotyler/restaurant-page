@@ -1,43 +1,41 @@
-import { contactFunction } from './contact';
-import { homepageFunction } from './homepage';
-import { menuFunction } from './menu';
+import { contactFunction } from "./contact";
+import { homepageFunction } from "./homepage";
+import { menuFunction } from "./menu";
 
 homepageFunction();
 
-const contentDiv = document.getElementById('content');
+const contentDiv = document.getElementById("content");
 
 function renderHome() {
-    contentDiv.innerHTML = '';
-    homepageFunction();
-};
+  contentDiv.innerHTML = "";
+  homepageFunction();
+}
 
 function renderMenu() {
-    contentDiv.innerHTML = '';
-    menuFunction();
-};
+  contentDiv.innerHTML = "";
+  menuFunction();
+}
 
 function renderContact() {
-    contentDiv.innerHTML = '';
-    contactFunction();
-};
-
+  contentDiv.innerHTML = "";
+  contactFunction();
+}
 
 document.addEventListener("click", (e) => {
-    const target = e.target.innerText;
-  
-    if (target === "Home") {
-        renderHome();
-    }
+  const target = e.target.innerText;
 
-    if (target === "Menu") {
-        renderMenu();
-    }
+  if (target === "Home") {
+    renderHome();
+  }
 
-    if (target === "Contact") {
-        renderContact();
-    }
+  if (target === "Menu") {
+    renderMenu();
+  }
 
-  });
+  if (target === "Contact") {
+    renderContact();
+  }
+});
 
 /*
 
@@ -48,5 +46,7 @@ ideas for future use:
 -add page for media/press
 -add shopify/online ordering plugin
 -add social media widgets
+-fix modules and build out page in index, remove all the dom querying from other modules
+-add styling to carousel dots to highlight currently displayed image
 
 */
